@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Vendor Example, Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Vendor Example, Inc. Software Agreement
+ * that is bundled with this package in the file LICENSE_BAS.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.vendorexample.com/software/license/
+ *
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@vendorexample.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this software to
+ * newer versions in the future. If you wish to customize this software for
+ * your needs please refer to http://www.vendorexample.com/software for more
+ * information.
+ *
+ * @category    VendorExample
+ * @package     VendorExample_ExtendCustomerBalance
+ * @copyright   Copyright (c) 2015-current Vendor Example,Inc. (http://www.vendorexample.com)
+ * @license     http://www.vendorexample.com/software/license
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="steps" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="billing-step" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="payment" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="afterMethods" xsi:type="array">
+                                                            <item name="children" xsi:type="array">
+                                                                <item name="storeCredit" xsi:type="array">
+                                                                    <item name="config" xsi:type="array">
+                                                                        <item name="componentDisabled" xsi:type="boolean">true</item>
+                                                                    </item>
+                                                                </item>
+                                                                <item name="baStoreCredit" xsi:type="array">
+                                                                    <item name="component" xsi:type="string">VendorExample_ExtendCustomerBalance/js/view/checkout/payment/ba-customer-balance</item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                                <item name="sidebar" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="summary" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="totals" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="customerbalance" xsi:type="array">
+                                                            <item name="config" xsi:type="array">
+                                                                <item name="componentDisabled" xsi:type="boolean">true</item>
+                                                            </item>
+                                                        </item>
+                                                        <item name="bacustomerbalance" xsi:type="array">
+                                                            <item name="component" xsi:type="string">Magento_CustomerBalance/js/view/cart/summary/customer-balance</item>
+                                                            <item name="config" xsi:type="array">
+                                                                <item name="title" translate="true" xsi:type="string">Store Credit</item>
+                                                                <item name="template" xsi:type="string">VendorExample_ExtendCustomerBalance/checkout/summary/ba-customer-balance</item>
+                                                            </item>
+                                                            <item name="sortOrder" xsi:type="string">95</item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
